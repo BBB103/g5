@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <title>智能調酒師</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+<body>
+    <h1>請選擇品項</h1>
+
+    <div id="cocktail-list"></div>
+    <div id="progress">
+        進度：<span id="progress-value">0</span>%
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js" 
+        integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz" 
+        crossorigin="anonymous"></script>
+    <script src="/static/js/connection.js" defer></script>
+    <script src="/static/js/cocktails.js" defer></script>
+    <script src="/static/js/app.js" defer></script>
+</body>
+</html>
