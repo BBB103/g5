@@ -190,7 +190,7 @@ def handle_order(data):
 
 if __name__ == '__main__':
     try:
-        socketio.run(app, host='0.0.0.0', port=5000, debug=True)
+        socketio.run(app, host='0.0.0.0', port=5000, debug=True, allow_unsafe_werkzeug=True)
     finally:
         # 清理GPIO
         GPIO.cleanup()
