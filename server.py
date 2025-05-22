@@ -3,6 +3,8 @@
 from flask import Flask, send_from_directory
 from flask_socketio import SocketIO, emit
 import json
+import eventlet
+eventlet.monkey_patch()
 
 app = Flask(__name__, static_folder='static')
 app.config['SECRET_KEY'] = 'secret!'
