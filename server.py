@@ -11,11 +11,11 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 COCKTAILS = {
-    "RED": {"name": "紅色", "ingredients": {"red": 15}},
-    "YELLOW": {"name": "黃色", "ingredients": {"yellow": 15}},
-    "BLUE": {"name": "藍色", "ingredients": {"blue": 15}},
-    "GREEN": {"name": "綠色", "ingredients": {"yellow": 15, "blue": 15}},
-    "PURPLE": {"name": "紫色", "ingredients": {"red": 15, "blue": 15}}
+    "RED": {"name": "紅色", "ingredients": {"red": 15} ,"descrption":"紅紅的", "image": "red.png"},
+    "YELLOW": {"name": "黃色", "ingredients": {"yellow": 15},"descrption":"黃黃的", "image": "yellow.png"},
+    "BLUE": {"name": "藍色", "ingredients": {"blue": 15},"descrption":"藍藍的", "image": "blue.png"},
+    "GREEN": {"name": "綠色", "ingredients": {"yellow": 15, "blue": 15},"descrption":"綠綠的", "image": "green.png"},
+    "PURPLE": {"name": "紫色", "ingredients": {"red": 15, "blue": 15},"descrption":"紫紫的", "image": "purple.png"}
 }
 
 @app.route('/')
