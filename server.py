@@ -58,7 +58,7 @@ def handle_close():
 @socketio.on("shaking")
 def handle_shake():
     machine_status["busy"] = True
-    machine_status["progress"] = "正在=shake"
+    machine_status["progress"] = "正在shake"
     socketio.emit('status_update', machine_status)
 @socketio.on("done")
 def handle_done():
