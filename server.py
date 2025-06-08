@@ -36,7 +36,7 @@ COCKTAILS = {
         "image": "grasshopper.webp"
     },
     "PURPLE": {
-        "name": "Aviation (紫色)",
+        "name": "Aviation   (紫色)",
         "ingredients": {"red": 15, "blue": 15},
         "descrption": "結合琴酒與紫羅蘭香甜酒，適合浪漫夜晚或安靜時刻品飲，口感淡雅略帶花香。",
         "image": "aviation.png"
