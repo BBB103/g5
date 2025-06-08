@@ -42,8 +42,13 @@ p {
 }
 
 #progress {
-    font-size: 32px;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    font-size: 48px;
     font-weight: bold;
-    margin-top: 20px;
+    color: #ff6600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
     color: #ff6600;
 }
