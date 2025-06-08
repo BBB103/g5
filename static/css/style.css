@@ -1,7 +1,10 @@
 body {
-  background-color: lightblue;
   font-family: sas-serif;
   margin: 2rem;
+  background-image: url('/static/images/bar.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 捲動時背景不動 */
 }
   
 h1 {

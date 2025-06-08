@@ -1,22 +1,48 @@
 # backend.py on Railway
+import eventlet
+eventlet.monkey_patch()
 
 from flask import Flask, send_from_directory
 from flask_socketio import SocketIO, emit
 import json
-import eventlet
-eventlet.monkey_patch()
 
 app = Flask(__name__, static_folder='static')
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 COCKTAILS = {
-    "RED": {"name": "紅色", "ingredients": {"red": 15} ,"descrption":"紅紅的", "image": "red.png"},
-    "YELLOW": {"name": "黃色", "ingredients": {"yellow": 15},"descrption":"黃黃的", "image": "yellow.png"},
-    "BLUE": {"name": "藍色", "ingredients": {"blue": 15},"descrption":"藍藍的", "image": "blue.png"},
-    "GREEN": {"name": "綠色", "ingredients": {"yellow": 15, "blue": 15},"descrption":"綠綠的", "image": "green.png"},
-    "PURPLE": {"name": "紫色", "ingredients": {"red": 15, "blue": 15},"descrption":"紫紫的", "image": "purple.png"}
+    "RED": {
+        "name": "Bloody Mary (紅色)",
+        "ingredients": {"red": 15},
+        "descrption": "番茄汁為基底，鹹香微辣，適合早午餐或解宿醉時飲用，口感濃郁厚實。",
+        "image": "Bloody-Mary.jpg"
+    },
+    "YELLOW": {
+        "name": "Screwdriver (黃色)",
+        "ingredients": {"yellow": 15},
+        "descrption": "由伏特加與柳橙汁調製，清爽酸甜，適合午後小酌，口感滑順易飲。",
+        "image": "screw.jpg"
+    },
+    "BLUE": {
+        "name": "Blue Hawaii (藍色)",
+        "ingredients": {"blue": 15},
+        "descrption": "藍柑橘搭配鳳梨與蘭姆酒，熱帶風情濃厚，適合派對或海灘時享用，口感清新帶果香。",
+        "image": "bluehaw.webp"
+    },
+    "GREEN": {
+        "name": "Grasshopper (綠色)",
+        "ingredients": {"yellow": 15, "blue": 15},
+        "descrption": "薄荷酒與可可酒交織出的甜香，適合飯後作為甜點酒，口感冰涼滑順。",
+        "image": "grasshopper.webp"
+    },
+    "PURPLE": {
+        "name": "Aviation (紫色)",
+        "ingredients": {"red": 15, "blue": 15},
+        "descrption": "結合琴酒與紫羅蘭香甜酒，適合浪漫夜晚或安靜時刻品飲，口感淡雅略帶花香。",
+        "image": "aviation.png"
+    }
 }
+
 
 machine_status= {
     "busy" : False,
@@ -58,7 +84,7 @@ def handle_close():
 @socketio.on("shaking")
 def handle_shake():
     machine_status["busy"] = True
-    machine_status["progress"] = "正在shake"
+    machine_status["progress"] = "shakeing"
     socketio.emit('status_update', machine_status)
 @socketio.on("done")
 def handle_done():
