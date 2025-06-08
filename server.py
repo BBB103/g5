@@ -26,7 +26,7 @@ COCKTAILS = {
     "BLUE": {
         "name": "Blue Hawaii (藍色)",
         "ingredients": {"blue": 15},
-        "descrption": "藍柑橘搭配鳳梨與蘭姆酒，熱帶風情濃厚，適合派對或海灘時享用，口感清新帶果香。",
+        "descrption": "藍柑橘搭配蘭姆酒，熱帶風情濃厚，適合派對或海灘時享用，口感清新帶果香。",
         "image": "bluehaw.webp"
     },
     "GREEN": {

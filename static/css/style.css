@@ -11,7 +11,7 @@ h1 {
   color: #6f42c1;
 }
   
-h1 {
+h2 {
   color: white;
 }
 
@@ -23,6 +23,7 @@ button {
 p {
   font-family: verdana;
   font-size: 20px;
+  color: ;
 }
 
 .cocktail-card {
