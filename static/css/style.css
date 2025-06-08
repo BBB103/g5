@@ -43,9 +43,9 @@ p {
 
 #progress {
     position: fixed;
-    bottom: 30px;
-    right: 50px;
-    font-size: 48px;
+    bottom: 50px;
+    right: 120px;
+    font-size: 42px;
     font-weight: bold;
     color: #ff6600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
