@@ -21,7 +21,7 @@ function renderCocktailLists(cocktails){
         card.appendChild(name);
 
         const desc = document.createElement("p");
-        desc.textContent = cocktail.description;
+        desc.textContent = cocktail.descrption;
         card.appendChild(desc);
         
         const btn = document.createElement("button");
