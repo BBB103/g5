@@ -84,13 +84,13 @@ def handle_close():
 @socketio.on("shaking")
 def handle_shake():
     machine_status["busy"] = True
-    machine_status["progress"] = "shakeing"
+    machine_status["progress"] = "shaking"
     socketio.emit('status_update', machine_status)
 @socketio.on("done")
 def handle_done():
+    socketio.emit("cocktail_ready",(machine_status['current_cocktail']))
     machine_status['current_cocktail'] = None
     machine_status['progress'] = 0
     socketio.emit('status_update', machine_status)
-
 if __name__ == '__main__':
     socketio.run(app, host='0.0.0.0', port=5000)
