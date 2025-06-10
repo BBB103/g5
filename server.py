@@ -18,9 +18,9 @@ COCKTAILS = {
         "image": "Bloody-Mary.jpg"
     },
     "YELLOW": {
-        "name": "Screwdriver (黃色)",
+        "name": "Golden Dream(黃色)",
         "ingredients": {"yellow": 15},
-        "descrption": "由伏特加與柳橙汁調製，清爽酸甜，適合午後小酌，口感滑順易飲。",
+        "descrption": "由香草酒與柳橙酒調製，果香濃郁甜潤，適合餐後啜飲，酒體柔順層次分明。",
         "image": "screw.jpg"
     },
     "BLUE": {
