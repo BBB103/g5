@@ -75,7 +75,7 @@ def handle_pour():
     machine_status["progress"] = "正在倒入原料"
     socketio.emit('status_update', machine_status)
 
-@socketio.on("closing")
+@socketio.on("closingoropening")
 def handle_close():
     machine_status["busy"] = True
     machine_status["progress"] = "正在關杯蓋"
@@ -90,7 +90,7 @@ def handle_shake():
 def handle_done():
     socketio.emit("cocktail_ready",(machine_status['current_cocktail']))
     machine_status['current_cocktail'] = None
-    machine_status['progress'] = 0
+    machine_status['progress'] = "待機"
     socketio.emit('status_update', machine_status)
 if __name__ == '__main__':
     socketio.run(app, host='0.0.0.0', port=5000)
